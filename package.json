@@ -1,0 +1,24 @@
+{
+  "name": "impactlabs-ext-svc",
+  "version": "1.0.0",
+  "description": "External services for all service providers. Will use swagger open API format to be imported in flows as external services integration.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "impact",
+    "labs",
+    "external",
+    "services"
+  ],
+  "author": "Arup Sarkar",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.19.2",
+    "body-parser": "^1.19.0",
+    "crypto": "^1.0.1",
+    "express": "^4.17.1",
+    "swagger-ui-express": "^4.1.4"
+  }
+}

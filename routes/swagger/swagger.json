@@ -1,0 +1,54 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "version": "1.0.0",
+    "title": "Salesforce External Services Integration",
+    "description": "This service will be consumed by salesforce external services to get loyalty points declaratively",
+    "license": {
+      "name": "MIT",
+      "url": "https://opensource.org/licenses/MIT"
+    }
+  },
+  "host": "localhost:8080",
+  "basePath": "/services",
+  "tags": [
+    {
+      "name": "Services",
+      "description": "API for Impact Labs services"
+    }
+  ],
+  "schemes": ["http", "https"],
+  "consumes": ["application/json"],
+  "produces": ["application/json"],
+  "paths": {
+    "/onedegree/opportunities/{api_key}": {
+      "get": {
+        "operationId": "getOpportunities",
+        "summary": "Retrieves Onedegree opportunities",
+        "description": "Retrieves opportunity details for a specific api key from one degree",
+        "consumes": ["text/plain"],
+        "produces": ["application/json"],
+        "parameters": [
+          {
+            "name": "api_key",
+            "in": "path",
+            "description": "return opportunity details for the api key",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "v1/opportunities"
+          },
+          "400": {
+            "description": "Invalid api key supplied"
+          },
+          "404": {
+            "description": "There is some problem"
+          }
+        }
+      }
+    }
+  }
+}
