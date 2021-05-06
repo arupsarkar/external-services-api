@@ -21,35 +21,6 @@
   "consumes": ["application/json"],
   "produces": ["application/json"],
   "paths": {
-    "/onedegree/opportunities/{api_key}": {
-      "get": {
-        "operationId": "getOpportunities",
-        "summary": "Retrieves Onedegree opportunities",
-        "description": "Retrieves opportunity details for a specific api key from one degree",
-        "consumes": ["text/plain"],
-        "produces": ["application/json"],
-        "parameters": [
-          {
-            "name": "api_key",
-            "in": "path",
-            "description": "return opportunity details for the api key",
-            "required": true,
-            "type": "string"
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "v1/opportunities"
-          },
-          "400": {
-            "description": "Invalid api key supplied"
-          },
-          "404": {
-            "description": "There is some problem"
-          }
-        }
-      }
-    },
     "/address/validate/{address_string}": {
       "get": {
         "operationId": "validateAddress",
