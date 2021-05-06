@@ -4,7 +4,7 @@ const path = require('path');
 
 const onedegreeRouter = require('./routes/services/onedegree/opportunities');
 const swaggerDocRouter = require('./routes/swagger/swagger');
-const swaggerSchema = require('./routes/swagger/swagger.json');
+const addressRouter = require('./routes/services/address/validate');
 const app = express();
 
 
@@ -17,7 +17,7 @@ app.use('/api', express.static('./routes/swagger') , function(req, res){
 
 app.use('/services/onedegree', onedegreeRouter);
 app.use('/ext-svc/swagger', swaggerDocRouter);
-// app.use('/ext-svc/swagger/schema', swaggerSchema);
+app.use('/services/address', addressRouter);
 
 
 module.exports = app;

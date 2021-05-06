@@ -49,6 +49,35 @@
           }
         }
       }
+    },
+    "/address/validate/{address_string}": {
+      "get": {
+        "operationId": "validateAddress",
+        "summary": "Validates Address",
+        "description": "This service will check if the address is valid or not",
+        "consumes": ["text/plain"],
+        "produces": ["text/plain"],
+        "parameters": [
+          {
+            "name": "address_string",
+            "in": "path",
+            "description": "return true or false",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "services/address/validate"
+          },
+          "400": {
+            "description": "Invalid address supplied"
+          },
+          "404": {
+            "description": "There is some problem"
+          }
+        }
+      }
     }
   }
 }
